@@ -1,0 +1,11 @@
+-main ApplicationMain 
+-D nme_install_tool
+-cp src
+-lib nme
+-swf-version 10
+-swf9 bin/flash/bin/SoundWidget.swf
+-swf-header 40:40:60:DDDDDD
+-cp bin/flash/haxe
+-D fdb
+--no-inline
+-debug

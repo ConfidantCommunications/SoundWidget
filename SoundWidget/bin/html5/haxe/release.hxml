@@ -1,0 +1,8 @@
+-main ApplicationMain 
+-D nme_install_tool
+-cp src
+-lib nme
+-js bin/html5/bin/SoundWidget.js
+-cp bin/html5/haxe
+--remap flash:jeash
+-lib jeash

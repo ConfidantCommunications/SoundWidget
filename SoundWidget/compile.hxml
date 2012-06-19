@@ -1,0 +1,4 @@
+-swf9 bin/flash/soundWidget.swf
+-main ca.confidant.soundWidget.Main
+-cp src
+-lib nme
