@@ -1,6 +1,19 @@
 var swfVersionStr = "9.0.115";
-		
-if (swfobject.getQueryParamValue("flash") != "0" && swfobject.hasFlashPlayerVersion(swfVersionStr)) {
+function supports_canvas() {
+	return !!document.createElement('canvas').getContext;
+}
+function supports_mp3(){
+	var a = document.createElement('audio');
+	return !!(a.canPlayType && a.canPlayType('audio/mpeg;').replace(/no/, ''));
+
+}
+
+if(supports_canvas()&&supports_mp3()){
+	var app = document.createElement("script");
+	app.setAttribute("type","text/javascript");
+	app.setAttribute("src", "./SoundWidgetMin.js");
+	document.getElementsByTagName("head")[0].appendChild(app)
+} else if (swfobject.hasFlashPlayerVersion(swfVersionStr)) {
 	
 	
 	var xiSwfUrlStr = "expressInstall.swf";
@@ -32,8 +45,5 @@ if (swfobject.getQueryParamValue("flash") != "0" && swfobject.hasFlashPlayerVers
 		swfVersionStr, xiSwfUrlStr,
 		flashvars, params, attributes);
 } else {
-	var app = document.createElement("script");
-	app.setAttribute("type","text/javascript");
-	app.setAttribute("src", "./SoundWidget.js");
-	document.getElementsByTagName("head")[0].appendChild(app)
+	//No canvas or Flash support
 }
