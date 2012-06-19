@@ -23,47 +23,6 @@
 	  <arg line='run jsmin bin/html5/bin/SoundWidget.js bin/html5/bin/SoundWidgetMin.js'/>
 	</exec>
 </target>
-<target name="buildIOSsim">
-	<echo message="NME Test iOS Simulator"/>
-	<exec executable="${nmePath}">
-	  <arg line='test "${nmmlFile}" ios -simulator'/>
-	</exec>
-</target>
-<target name="buildIOS">
-	<echo message="NME Test iOS"/>
-	<exec executable="${nmePath}">
-	  <arg line='build "${nmmlFile}" ios'/>
-	</exec>
-</target>
-<target name="buildWebOS">
-	<echo message="NME Test WebOS"/>
-	<exec executable="${nmePath}">
-	  <arg line='test "${nmmlFile}" webos'/>
-	</exec>
-</target>
-<target name="buildAndroid">
-	<echo message="NME Test Android"/>
-	<exec executable="${nmePath}">
-	  <arg line='test "${nmmlFile}" android'/>
-	</exec>
-</target>
-<target name="buildWindows">
-	<echo message="NME Test Windows"/>
-	<exec executable="${nmePath}">
-	  <arg line='test "${nmmlFile}" windows'/>
-	</exec>
-</target>
-<target name="buildMac">
-	<echo message="NME Test Mac"/>
-	<exec executable="${nmePath}">
-	  <arg line='test "${nmmlFile}" mac'/>
-	</exec>
-</target>
-<target name="buildLinux">
-	<echo message="NME Test Linux - neko"/>
-	<exec executable="${nmePath}">
-	  <arg line='test "${nmmlFile}" linux'/>
-	</exec>
-</target>
+
 
 </project>

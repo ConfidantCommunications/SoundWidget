@@ -1,0 +1,9 @@
+This widget is intended for use on a webpage where you want to have an auto-playing audio file upon visiting the page. Thanks to Haxe and NME, it can use both HTML5 and Flash to target the maximum number of browsers.
+
+Please check out: /bin/html5/bin/hybridSound.html to see the demo.
+
+The script detects whether the browser supports HTML5 audio and canvas, and uses Flash if those are not supported. 
+
+The SoundWidget will use a cookie (JavaScript) or local shared object (Flash) to remember whether the user wants sound enabled.
+
+Use the included Ant tasks to build the project using FDT or another Eclipse-based editor.
